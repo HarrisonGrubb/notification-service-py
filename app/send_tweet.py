@@ -29,6 +29,12 @@ client = tweepy.API(auth)
 
 user = client.me() # get information about the currently authenticated user
 
+data = client.user_timeline('NYCTSubway')
+
+print(data)
+
+quit()
+
 time_now = datetime.datetime.now() # a way for us to implement status uniqueness to avoid subsequent tweets running into ... tweepy.error.TweepError: [{'code': 187, 'message': 'Status is a duplicate.'}]
 time_now_formatted = str(time_now) #> '2019-03-13 16:41:26.282159'
 status = f"An example tweet sent programmatically from https://github.com/prof-rossetti/notification-service-py at {time_now_formatted}"
