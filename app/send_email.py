@@ -15,7 +15,7 @@ MY_EMAIL_ADDRESS = os.environ.get("MY_EMAIL_ADDRESS", "OOPS, please set env var 
 
 # AUTHENTICATE
 
-sg = sendgrid.SendGridAPIClient(apikey=SENDGRID_API_KEY)
+sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
 
 # COMPILE REQUEST PARAMETERS (PREPARE THE EMAIL)
 
